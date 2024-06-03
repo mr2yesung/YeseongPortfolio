@@ -14,6 +14,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@layer components {
+  .after-effect {
+    @apply text-7xl font-bold font-robotoSlab inline-block relative after:absolute transform after:-translate-y-[50%] after:bg-gradient-to-r from-[#fa5252] to-[#dd2476] after:h-0.5 after:rounded-md after:content-[""] md:after:w-48 after:top-[50%] dark:text-white;
+  }
+}
+
 @layer utilities {
   .gradient-text {
     @apply bg-clip-text text-transparent;
