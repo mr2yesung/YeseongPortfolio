@@ -4,6 +4,8 @@ import { DarkModeProvider } from "./hooks/DarkModeContext";
 import Home from "./pages/home/Home";
 import Resume from "./pages/resume/Resume";
 
+import NotFound from "./pages/not-found/NotFound";
+
 // todo: implement download cv
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Route path="/" element={<PageLayout />}>
           <Route index element={<Home />} />
           <Route path="resume" element={<Resume />} />
+
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </DarkModeProvider>
