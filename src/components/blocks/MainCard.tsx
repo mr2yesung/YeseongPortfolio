@@ -70,8 +70,8 @@ function MainCard() {
           </div>
 
           <a
-            download
-            href=""
+            href="/cv.pdf"
+            download="Yeseong-Kim-Resume.pdf"
             className="mx-auto mt-8 inline-flex items-center rounded-[35px] bg-gradient-to-l from-[#fa5252] to-[#dd2476] px-8 py-3 text-lg text-white transition duration-200 ease-linear hover:bg-gradient-to-r"
           >
             <img

@@ -9,7 +9,6 @@ import NotFound from "./pages/not-found/NotFound";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// todo: implement download cv
 function App() {
   return (
     <>
