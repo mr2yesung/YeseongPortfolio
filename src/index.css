@@ -7,16 +7,13 @@
 @layer base {
   html {
     @apply font-poppins;
+    scroll-behavior: smooth;
   }
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 @layer components {
   .after-effect {
-    @apply text-7xl font-bold font-robotoSlab inline-block relative after:absolute transform after:-translate-y-[50%] after:bg-gradient-to-r from-[#fa5252] to-[#dd2476] after:h-0.5 after:rounded-md after:content-[""] md:after:w-48 after:top-[50%] dark:text-white;
+    @apply relative inline-block transform from-[#fa5252] to-[#dd2476] font-robotoSlab text-7xl font-bold after:absolute after:top-[50%] after:h-0.5 after:-translate-y-[50%] after:rounded-md after:bg-gradient-to-r after:content-[""] dark:text-white md:after:w-48;
   }
 }
 
@@ -29,4 +26,23 @@ html {
 
 #root {
   overflow: hidden;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.text-2line {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
 }
