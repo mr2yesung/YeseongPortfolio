@@ -4,6 +4,7 @@ import HomeIntro from "./HomeIntro";
 import HomeSection from "./HomeSection";
 import HomeSkillsLayout from "./HomeSkillsLayout";
 import { useDarkMode } from "../../hooks/DarkModeContext";
+import PageFadeIn from "../../components/animation/PageFadeIn";
 
 function Home() {
   const { isDarkMode } = useDarkMode();
@@ -62,103 +63,97 @@ function Home() {
   ];
 
   return (
-    <section>
-      <div className="bg-white dark:bg-[#111111] lg:rounded-2xl">
-        <div>
-          <HomeSection className="pt-12 md:py-12">
-            <h2 className="after-effect hidden after:left-52 lg:block">
-              About Me
-            </h2>
-            <div className="hidden grid-cols-12 items-center pt-4 md:gap-10 md:pt-[30px] lg:grid">
-              <div className="col-span-12 space-y-2.5">
-                <HomeIntro />
+    <PageFadeIn>
+      <HomeSection className="pt-12 md:py-12">
+        <h2 className="after-effect hidden after:left-52 lg:block">About Me</h2>
+        <div className="hidden grid-cols-12 items-center pt-4 md:gap-10 md:pt-[30px] lg:grid">
+          <div className="col-span-12 space-y-2.5">
+            <HomeIntro />
+          </div>
+        </div>
+
+        <div className="lg:hidden">
+          <MainCard />
+
+          <div className="mb-12 md:pt-[30px]">
+            <h2 className="after-effect mb-5 after:left-52">About Me</h2>
+            <div className="space-y-2.5">
+              <HomeIntro />
+            </div>
+          </div>
+        </div>
+      </HomeSection>
+
+      <HomeSection className="pb-12">
+        <h3 className="pb-5 text-[35px] font-medium dark:text-white">
+          What I do&#63;
+        </h3>
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {services.map((service) => (
+            <div
+              key={service.title}
+              className={`flex gap-4 rounded-xl border-[#212425] p-6 dark:border-2 dark:bg-transparent ${service.backgroundClass}`}
+            >
+              <img
+                className="block h-10 w-10 object-contain"
+                src={service.iconPath}
+                alt={service.title}
+              />
+
+              <div className="space-y-2 break-words">
+                <h3 className="text-xl font-semibold dark:text-white">
+                  {service.title}
+                </h3>
+                <p className="leading-8 text-gray-lite dark:text-[#a6a6a6]">
+                  {service.content}
+                </p>
               </div>
             </div>
+          ))}
+        </div>
+      </HomeSection>
 
-            <div className="lg:hidden">
-              <MainCard />
-
-              <div className="mb-12 md:pt-[30px]">
-                <h2 className="after-effect mb-5 after:left-52">About Me</h2>
-                <div className="space-y-2.5">
-                  <HomeIntro />
+      <HomeSection className="bg-color-810 dark:bg-[#0d0d0d]">
+        <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:px-6">
+          <HomeSkillsLayout title="My Skills">
+            {skills.map((skill) => (
+              <div key={skill.title} className="mb-7">
+                <div className="flex justify-between py-1">
+                  <span className="text-base font-semibold text-gray-lite dark:text-[#a6a6a6]">
+                    {skill.title}
+                  </span>
+                  <span className="pr-5 text-base font-semibold text-gray-lite dark:text-[#a6a6a6]">
+                    {skill.value}&#37;
+                  </span>
                 </div>
+
+                <Line
+                  percent={skill.value}
+                  strokeWidth={1}
+                  trailWidth={1}
+                  trailColor={`${isDarkMode ? "#1c1c1c" : "#edf2f2"}`}
+                  strokeColor={skill.color}
+                />
               </div>
-            </div>
-          </HomeSection>
+            ))}
+          </HomeSkillsLayout>
 
-          <HomeSection className="pb-12">
-            <h3 className="pb-5 text-[35px] font-medium dark:text-white">
-              What I do&#63;
-            </h3>
-
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              {services.map((service) => (
-                <div
-                  key={service.title}
-                  className={`flex gap-4 rounded-xl border-[#212425] p-6 dark:border-2 dark:bg-transparent ${service.backgroundClass}`}
+          <HomeSkillsLayout title="Knowledges">
+            <div className="flex flex-wrap gap-x-2.5 gap-y-5">
+              {knowledges.map((knowledge) => (
+                <p
+                  key={knowledge}
+                  className="cursor-default rounded-lg bg-[#edf2f2] px-5 py-2 text-gray-lite dark:bg-[#1c1c1c] dark:text-[#a6a6a6]"
                 >
-                  <img
-                    className="block h-10 w-10 object-contain"
-                    src={service.iconPath}
-                    alt={service.title}
-                  />
-
-                  <div className="space-y-2 break-words">
-                    <h3 className="text-xl font-semibold dark:text-white">
-                      {service.title}
-                    </h3>
-                    <p className="leading-8 text-gray-lite dark:text-[#a6a6a6]">
-                      {service.content}
-                    </p>
-                  </div>
-                </div>
+                  {knowledge}
+                </p>
               ))}
             </div>
-          </HomeSection>
-
-          <HomeSection className="bg-color-810 dark:bg-[#0d0d0d]">
-            <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:px-6">
-              <HomeSkillsLayout title="My Skills">
-                {skills.map((skill) => (
-                  <div key={skill.title} className="mb-7">
-                    <div className="flex justify-between py-1">
-                      <span className="text-base font-semibold text-gray-lite dark:text-[#a6a6a6]">
-                        {skill.title}
-                      </span>
-                      <span className="pr-5 text-base font-semibold text-gray-lite dark:text-[#a6a6a6]">
-                        {skill.value}&#37;
-                      </span>
-                    </div>
-
-                    <Line
-                      percent={skill.value}
-                      strokeWidth={1}
-                      trailWidth={1}
-                      trailColor={`${isDarkMode ? "#1c1c1c" : "#edf2f2"}`}
-                      strokeColor={skill.color}
-                    />
-                  </div>
-                ))}
-              </HomeSkillsLayout>
-
-              <HomeSkillsLayout title="Knowledges">
-                <div className="flex flex-wrap gap-x-2.5 gap-y-5">
-                  {knowledges.map((knowledge) => (
-                    <p
-                      key={knowledge}
-                      className="cursor-default rounded-lg bg-[#edf2f2] px-5 py-2 text-gray-lite dark:bg-[#1c1c1c] dark:text-[#a6a6a6]"
-                    >
-                      {knowledge}
-                    </p>
-                  ))}
-                </div>
-              </HomeSkillsLayout>
-            </div>
-          </HomeSection>
+          </HomeSkillsLayout>
         </div>
-      </div>
-    </section>
+      </HomeSection>
+    </PageFadeIn>
   );
 }
 

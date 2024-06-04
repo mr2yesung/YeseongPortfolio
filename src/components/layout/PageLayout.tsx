@@ -29,11 +29,11 @@ function PageLayout() {
   }
 
   return (
-    <section className="bg-home dark:bg-home-dark min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
-      <div className="container w-full bg-[#f3f6f6] dark:bg-black lg:bg-transparent lg:dark:bg-transparent flex justify-between py-5 lg:px-0 lg:pt-[50px]">
-        <div className="w-full flex justify-between px-4">
+    <section className="min-h-screen w-full bg-home bg-cover bg-fixed bg-center bg-no-repeat dark:bg-home-dark md:pb-16">
+      <div className="container flex w-full justify-between bg-[#f3f6f6] py-5 dark:bg-black lg:bg-transparent lg:px-0 lg:pt-[50px] lg:dark:bg-transparent">
+        <div className="flex w-full justify-between px-4">
           <Link to={"/"}>
-            <h2 className="gradient-text font-extrabold text-6xl tracking-tight">
+            <h2 className="gradient-text text-6xl font-extrabold tracking-tight">
               My Portfolio
             </h2>
           </Link>
@@ -46,7 +46,7 @@ function PageLayout() {
 
             <span
               onClick={toggleMenuOpen}
-              className={`bg-[#ef4060] w-[40px] h-[40px] rounded-full flex justify-center items-center text-white text-3xl ml-3 ${isMenuOpen ? "visible opacity-100 lg:opacity-0 lg:invisible" : "lg:hidden dark:text-white"}`}
+              className={`ml-3 flex h-[40px] w-[40px] items-center justify-center rounded-full bg-[#ef4060] text-3xl text-white ${isMenuOpen ? "visible opacity-100 lg:invisible lg:opacity-0" : "dark:text-white lg:hidden"}`}
             >
               {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
             </span>
@@ -56,16 +56,16 @@ function PageLayout() {
 
       <nav className={`${isMenuOpen ? "block lg:hidden" : "hidden"}`}>
         <ul
-          className={`${isMenuOpen ? "block rounded-b-[20px] shadow-md absolute left-0 top-20 z-50 w-full bg-white dark:bg-[#1d1d1d]" : "flex my-12"}`}
+          className={`${isMenuOpen ? "absolute left-0 top-20 z-50 block w-full rounded-b-[20px] bg-white shadow-md dark:bg-[#1d1d1d]" : "my-12 flex"}`}
         >
           {menuItems.map((item) => (
             <li key={item.name} onClick={closeMenu}>
               <NavLink
                 to={item.path}
                 className={({ isActive }) => {
-                  const className = `cursor-pointer transition-colors duration-300 ease-in-out font-poppins text-xtiny font-medium flex items-center py-2.5 md:px-4 xl:px-5 ${isMenuOpen ? "pl-4" : "mx-2.5 rounded-md"}`;
+                  const className = `flex cursor-pointer items-center py-2.5 font-poppins text-xtiny font-medium transition-colors duration-300 ease-in-out md:px-4 xl:px-5 ${isMenuOpen ? "pl-4" : "mx-2.5 rounded-md"}`;
 
-                  return `${className} ${isActive ? "text-[#fa5252] hover:text-[#fa5252]" : "text-gray-lite dark:text-white dark:hover:text-[#fa5252] hover:text-[#fa5252]"}`;
+                  return `${className} ${isActive ? "text-[#fa5252] hover:text-[#fa5252]" : "text-gray-lite hover:text-[#fa5252] dark:text-white dark:hover:text-[#fa5252]"}`;
                 }}
               >
                 <span className="mr-2 text-xl">{item.icon}</span>
@@ -76,8 +76,8 @@ function PageLayout() {
         </ul>
       </nav>
 
-      <div className="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px]">
-        <div className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44">
+      <div className="container grid grid-cols-12 justify-between md:gap-10 lg:mt-[220px]">
+        <div className="sticky top-44 col-span-12 hidden h-screen lg:col-span-4 lg:block">
           <MainCard />
         </div>
 
@@ -89,18 +89,22 @@ function PageLayout() {
                 to={item.path}
                 className={({ isActive }) => {
                   const className =
-                    "w-full h-20 rounded-[10px] cursor-pointer transition-all duration-300 ease-in-out font-poppins bg-[#f3f6f6] font-medium mx-2.5 text-xtiny flex flex-col justify-center items-center";
+                    "mx-2.5 flex h-20 w-full cursor-pointer flex-col items-center justify-center rounded-[10px] bg-[#f3f6f6] font-poppins text-xtiny font-medium transition-all duration-300 ease-in-out";
 
-                  return `${className} ${isActive ? "text-white bg-gradient-to-r from-[#fa5252] to-[#dd2476]" : "text-gray-lite hover:text-white hover:bg-gradient-to-r hover:from-[#fa5252] hover:to-[#dd2476] dark:text-[#a6a6a6] dark:bg-[#212425] dark:hover:text-white"}`;
+                  return `${className} ${isActive ? "bg-gradient-to-r from-[#fa5252] to-[#dd2476] text-white" : "text-gray-lite hover:bg-gradient-to-r hover:from-[#fa5252] hover:to-[#dd2476] hover:text-white dark:bg-[#212425] dark:text-[#a6a6a6] dark:hover:text-white"}`;
                 }}
               >
-                <span className="text-xl mb-1">{item.icon}</span>
+                <span className="mb-1 text-xl">{item.icon}</span>
                 {item.name}
               </NavLink>
             ))}
           </Header>
 
-          <Outlet />
+          <section>
+            <div className="bg-white dark:bg-[#111111] lg:rounded-2xl">
+              <Outlet />
+            </div>
+          </section>
         </div>
       </div>
     </section>
