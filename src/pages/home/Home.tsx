@@ -14,28 +14,28 @@ function Home() {
       title: "Web Development",
       content:
         "I stay updated on industry trends and best practices to deliver modern solutions.",
-      iconPath: "/src/assets/images/icons/web.png",
+      iconPath: "/images/icons/web.png",
       backgroundClass: "bg-[#FCF4FF]",
     },
     {
       title: "Team Collaboration",
       content:
         "I value teamwork and collaboration, and I actively contribute to a positive and productive team environment.",
-      iconPath: "/src/assets/images/icons/team.png",
+      iconPath: "/images/icons/team.png",
       backgroundClass: "bg-[#FEFAF0]",
     },
     {
       title: "Passionate Learning",
       content:
         "I am passionate about leveraging my skills in Front End development to create engaging user experiences.",
-      iconPath: "/src/assets/images/icons/learning.png",
+      iconPath: "/images/icons/learning.png",
       backgroundClass: "bg-[#FCF4FF]",
     },
     {
       title: "Game Development",
       content:
         "I pursue game development as a hobby, with a particular focus on Unity.",
-      iconPath: "/src/assets/images/icons/game.png",
+      iconPath: "/images/icons/game.png",
       backgroundClass: "bg-[#FFF4F4]",
     },
   ];

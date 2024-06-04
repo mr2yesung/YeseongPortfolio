@@ -15,7 +15,7 @@ function Works() {
   const works = [
     {
       title: "Beats",
-      image: "/src/assets/images/screenshots/beats.png",
+      image: "/images/screenshots/beats.png",
       skills: "React, TypeScript, Tailwind CSS",
       bgClassName: "bg-[#FCF4FF]",
       projectType: "Web Application",
@@ -28,7 +28,7 @@ function Works() {
     },
     {
       title: "GameNation",
-      image: "/src/assets/images/screenshots/game-nation.png",
+      image: "/images/screenshots/game-nation.png",
       skills: "React, TypeScript, Tailwind CSS",
       bgClassName: "bg-[#FEFAF0]",
       projectType: "Web Application",

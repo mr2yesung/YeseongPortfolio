@@ -33,8 +33,8 @@ export default {
     },
     extend: {
       backgroundImage: {
-        home: "url('src/assets/images/background/bg.jpg')",
-        "home-dark": "url('src/assets/images/background/bg-dark.jpg')",
+        home: "url('/images/background/bg.jpg')",
+        "home-dark": "url('/images/background/bg-dark.jpg')",
       },
       colors: {
         "gray-lite": "#44566c",
