@@ -7,20 +7,20 @@ import ResumeCard from "./ResumeCard";
 function Resume() {
   const experiences = [
     {
-      title: "Machine Learning Research Assistant",
-      organization: "Yonsei University",
-      date: "Jun 2022 - Sep 2022",
-      colorClassName: "bg-[#FCF4FF]",
-      content:
-        "Improved accuracy in the diagnosis of patent ductus arteriosus (PDA) in low birth weight infants by implementing machine learning techniques, specifically utilizing the random forest algorithm within a decision support system.",
-    },
-    {
       title: "Chief Technical Officer",
       organization: "Team BioSignus",
       date: "Sep 2022 - Jun 2023",
+      colorClassName: "bg-[#FCF4FF]",
+      content:
+        "Directed the development of a respiratory pattern monitoring patch for Neonatal Intensive Care Unit (NICU) patients, encompassing both hardware and software components.",
+    },
+    {
+      title: "Machine Learning Research Assistant",
+      organization: "Yonsei University",
+      date: "Jun 2022 - Sep 2022",
       colorClassName: "bg-[#FEFAF0]",
       content:
-        "Contributed to the comprehensive development of a respiratory pattern monitoring patch for Neonatal Intensive Care Unit (NICU) patients, encompassing both hardware and software components.",
+        " Integrated feature selection for diagnosing patent ductus arteriosus (PDA) in low birth weight infants by applying machine learning techniques with numpy, pandas, and scikit-learn modules in Python.",
     },
   ];
 
