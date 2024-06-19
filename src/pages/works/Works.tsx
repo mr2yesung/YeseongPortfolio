@@ -39,6 +39,19 @@ function Works() {
       explanation:
         "This project is a landing page for the game studio GameNation. It includes several features such as smooth scrolling to different page sections with scroll animations on each section, loading low-resolution image initially to enhance user experience, and a contact form that allows users to send emails directly from the site. The project incorporates a modern UI/UX design for an engaging and user-friendly experience.",
     },
+    {
+      title: "OBJ Loader",
+      image: "/images/screenshots/obj-loader.png",
+      skills: "C++, Linear Algebra, 3D Math",
+      bgClassName: "bg-[#FFF4F4]",
+      projectType: "Graphics Development",
+      githubLink: "https://github.com/mr2yesung/OBJ-Loader",
+      githubLinkDisplay: "github.com/mr2yesung",
+      previewLink: "https://www.youtube.com/watch?v=m8CLUY5hXJw&t=3s",
+      previewLinkDisplay: "Youtube Video",
+      explanation:
+        "This project utilizes OpenGL graphics specification to load and display .obj 3D model files while applying textures and lighting settings. The .obj file is parsed line by line to extract vertex data, and textures are loaded using the 'stb_image' library. The lighting system supports directional light with ambient and diffuse components. Additionally, the project includes a parsing function for '.shader' files containing both vertex and fragment shaders. A custom camera system is implemented for controlling movement, rotation, and zoom using principles of linear algebra and 3D mathematics.",
+    },
   ];
 
   const isModalOpen = modal >= 0 && modal < works.length;
