@@ -9,6 +9,9 @@ import NotFound from "./pages/not-found/NotFound";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// Vercel Analytics
+import { Analytics } from "@vercel/analytics/react";
+
 function App() {
   return (
     <>
@@ -26,6 +29,8 @@ function App() {
       </DarkModeProvider>
 
       <ToastContainer />
+
+      <Analytics />
     </>
   );
 }
