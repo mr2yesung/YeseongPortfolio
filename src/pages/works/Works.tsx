@@ -52,6 +52,19 @@ function Works() {
       explanation:
         "This project utilizes OpenGL graphics specification to load and display .obj 3D model files while applying textures and lighting settings. The .obj file is parsed line by line to extract vertex data, and textures are loaded using the 'stb_image' library. The lighting system supports directional light with ambient and diffuse components. Additionally, the project includes a parsing function for '.shader' files containing both vertex and fragment shaders. A custom camera system is implemented for controlling movement, rotation, and zoom using principles of linear algebra and 3D mathematics.",
     },
+    {
+      title: "Zombie Hunter",
+      image: "/images/screenshots/zombie-hunter.png",
+      skills: "Godot 4.2, GDScript, 3D Math",
+      bgClassName: "bg-[#FCF4FF]",
+      projectType: "Game Development",
+      githubLink: "https://github.com/mr2yesung/Zombie-Hunter",
+      githubLinkDisplay: "github.com/mr2yesung",
+      previewLink: "https://youtu.be/d8N3EGJL_0U",
+      previewLinkDisplay: "Youtube Video",
+      explanation:
+        "This game is inspired by PUBG: Battlegrounds and Vampire Survivors and developed using Godot 4.2. Before starting the game, players can choose their primary weapon (type of gun). There are two types of guns based on bullet speed: guns that use raycasting and guns that use projectiles. The game's zombies, which are the monsters, chase the player around the world, and the player earns points based on the number of zombies they defeat. Players can adjust graphics and sound settings, which are automatically saved to a file and loaded the next time the game is launched. The player's movements are implemented using a finite state machine, ensuring more organized and smooth behavior.",
+    },
   ];
 
   const isModalOpen = modal >= 0 && modal < works.length;
