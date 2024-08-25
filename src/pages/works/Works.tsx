@@ -73,10 +73,11 @@ function Works() {
       projectType: "Game Development",
       githubLink: "https://github.com/DOGU0908/UnrealEngineMultiplayerPlugin",
       githubLinkDisplay: "github.com/DOGU0908",
-      previewLink: "https://www.youtube.com/watch?v=aAcQxsvP92Q&feature=youtu.be",
+      previewLink:
+        "https://www.youtube.com/watch?v=aAcQxsvP92Q&feature=youtu.be",
       previewLinkDisplay: "Youtube Video",
       explanation:
-        "This game is inspired by PUBG: Battlegrounds and Vampire Survivors and developed using Godot 4.2. Before starting the game, players can choose their primary weapon (type of gun). There are two types of guns based on bullet speed: guns that use raycasting and guns that use projectiles. The game's zombies, which are the monsters, chase the player around the world, and the player earns points based on the number of zombies they defeat. Players can adjust graphics and sound settings, which are automatically saved to a file and loaded the next time the game is launched. The player's movements are implemented using a finite state machine, ensuring more organized and smooth behavior.",
+        "This project focuses on developing a reusable multiplayer feature for Unreal Engine 5.4.3. The plugin allows players to host and join sessions via LAN connection or Steam. By creating a plugin that encapsulates the multiplayer functionality, other projects can easily import it and configure the DefaultEngine.ini file in the Config folder to start utilizing these features.",
     },
     {
       title: "Unity RPG Character Customization",
@@ -84,12 +85,14 @@ function Works() {
       skills: "Unity, C#",
       bgClassName: "bg-[#FFF4F4]",
       projectType: "Game Development",
-      githubLink: "https://github.com/DOGU0908/Unity-RPG-Character-Customization",
+      githubLink:
+        "https://github.com/DOGU0908/Unity-RPG-Character-Customization",
       githubLinkDisplay: "github.com/DOGU0908",
-      previewLink: "https://www.youtube.com/watch?v=HaZJg9XJI0A&feature=youtu.be",
+      previewLink:
+        "https://www.youtube.com/watch?v=HaZJg9XJI0A&feature=youtu.be",
       previewLinkDisplay: "Youtube Video",
       explanation:
-        "This game is inspired by PUBG: Battlegrounds and Vampire Survivors and developed using Godot 4.2. Before starting the game, players can choose their primary weapon (type of gun). There are two types of guns based on bullet speed: guns that use raycasting and guns that use projectiles. The game's zombies, which are the monsters, chase the player around the world, and the player earns points based on the number of zombies they defeat. Players can adjust graphics and sound settings, which are automatically saved to a file and loaded the next time the game is launched. The player's movements are implemented using a finite state machine, ensuring more organized and smooth behavior.",
+        "This project is focused on developing a character customization feature for the main player character in a Unity RPG. Players have the ability to change the appearance and equipment of their character through the main menu and the character UI.",
     },
   ];
 
