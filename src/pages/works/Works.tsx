@@ -94,6 +94,19 @@ function Works() {
       explanation:
         "This project is focused on developing a character customization feature for the main player character in a Unity RPG. Players have the ability to change the appearance and equipment of their character through the main menu and the character UI.",
     },
+    {
+      title: "Runes Of The Archmage",
+      image: "/images/screenshots/runes-of-the-archmage.png",
+      skills: "Unreal Engine (GAS), C++",
+      bgClassName: "bg-[#FCF4FF]",
+      projectType: "Game Development",
+      githubLink: "https://github.com/DOGU0908/Runes-of-the-Archmage",
+      githubLinkDisplay: "github.com/DOGU0908",
+      previewLink: "https://youtu.be/c8KAMBCGIto",
+      previewLinkDisplay: "Youtube Video",
+      explanation:
+        "This project implements the common features of an RPG, with a focus on character status and skill management.",
+    },
   ];
 
   const isModalOpen = modal >= 0 && modal < works.length;

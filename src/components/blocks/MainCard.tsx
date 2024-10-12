@@ -79,7 +79,7 @@ function MainCard() {
               alt="download icon"
               className="mr-2"
             />
-            Download CV
+            Resume
           </a>
         </div>
       </div>
